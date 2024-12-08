@@ -8,14 +8,15 @@
 <body>
     <script>
         let dan = prompt();
-        function gugu(dan)
+        let max = prompt();
+        function gugu(dan,max)
         {
-            for(let i=1;i<=9;i++)
+            for(let i=1;i<=max;i++)
             {
                 console.log(`${dan}*${i}=${dan*i}`);
             }
         }
-        gugu(dan);
+        gugu(dan,max);
     </script>
 </body>
 </html>
