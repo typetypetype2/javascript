@@ -14,12 +14,8 @@
         {
             arr2[i]=10-i;   
         }
-        for(let i=0;i<=10;i++)
-        {
-            tarr[i]=arr2[i]%3;   
-        }
         arr2.forEach(function(num,i){
-            console.log(`현재 위치의 값은${num}이고,${num}을 3으로 나눴을때 나머지 값은 ${tarr[i]}입니다.`);
+            console.log(`현재 위치의 값은${num}이고,${num}을 3으로 나눴을때 나머지 값은 ${num%3}입니다.`);
         });
     </script>
 </body>
