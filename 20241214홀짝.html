@@ -9,12 +9,12 @@
     <script>
         let arr =[1,2,3,4,5,6,7,8,9,10];
 
-        arr.forEach(function(e){
-            if(e%2==0)
-                return;
-
-            console.log(`${e}는 홀수입니다`);
-        });
+        for(let i of obj)
+        {
+            if(i%2==0)
+                continue;
+            console.log(obj[i]);
+        }
     </script>
 </body>
 </html>
