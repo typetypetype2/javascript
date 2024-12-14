@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20241214DOM.html</title>
+</head>
+<body>
+    <h1 id="h1">ㅇㅎ1</h1>
+    <h1 id="h2" class="h1">ㅇㅎ2</h1>
+    <h1 id="h3" class="h1">ㅇㅎ3</h1>
+    <h1 id="h4">ㅇㅎ4</h1>
+    <h1 id="h5">ㅇㅎ5</h1>
+    <script>
+        let h1 = document.querySelector('#h1');
+
+        console.log(h1);
+
+        h1.addEventListener('click',function(){
+            alert('h1이 선택되었습니다');
+        });
+    </script>
+</body>
+</html>
