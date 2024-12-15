@@ -11,11 +11,12 @@
     <h1 id="h3" class="h1">타이틀입니다3</h1>
     <h1 id="h4" class="h1">타이틀입니다4</h1>
     <h1 id="h5">타이틀입니다5</h1>
+    <button>button</button>
     <script>
-        let h1 = document.querySelectorAll('.h1');
+        let btn = document.querySelectorAll('button');
         
-        h1[2].addEventListener('click',function(){
-            alert('네번째 타이틀');
+        btn[0].addEventListener('click',function(){
+            alert('왼쪽');
         });
     </script>
 </body>
