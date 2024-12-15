@@ -6,18 +6,16 @@
     <title>20241214DOM.html</title>
 </head>
 <body>
-    <h1 id="h1">h1</h1>
-    <h1 id="h2" class="h1">h2</h1>
-    <h1 id="h3" class="h1">h3</h1>
-    <h1 id="h4">h4</h1>
-    <h1 id="h5">h5</h1>
+    <h1 id="h1">타이틀입니다1</h1>
+    <h1 id="h2" class="h1">타이틀입니다2</h1>
+    <h1 id="h3" class="h1">타이틀입니다3</h1>
+    <h1 id="h4" class="h1">타이틀입니다4</h1>
+    <h1 id="h5">타이틀입니다5</h1>
     <script>
-        let h1 = document.querySelector('#h1');
-
-        console.log(h1);
-
-        h1.addEventListener('click',function(){
-            alert('h1이 선택되었습니다');
+        let h1 = document.querySelectorAll('.h1');
+        
+        h1[2].addEventListener('click',function(){
+            alert('네번째 타이틀');
         });
     </script>
 </body>
