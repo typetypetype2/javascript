@@ -6,18 +6,34 @@
     <title>20241214DOM.html</title>
 </head>
 <body>
-    <h1 id="h1">타이틀입니다1</h1>
-    <h1 id="h2" class="h1">타이틀입니다2</h1>
-    <h1 id="h3" class="h1">타이틀입니다3</h1>
-    <h1 id="h4" class="h1">타이틀입니다4</h1>
-    <h1 id="h5">타이틀입니다5</h1>
-    <button>button</button>
+    <button>위쪽</button>
+    <button>아래쪽</button>
+    <button>오른쪽</button>
+    <button>왼쪽</button>
+
     <script>
         let btn = document.querySelectorAll('button');
-        
-        btn[0].addEventListener('click',function(){
-            alert('왼쪽');
+
+        btn.forEach(function (e,i) {
+            e.addEventListener("click", function () {
+                switch(i)
+                {
+                    case 0 :
+                        alert(`위쪽 버튼입니다`);
+                        break;
+                    case 1 :
+                        alert(`아래쪽 버튼입니다`);
+                        break;
+                    case 2 :
+                        alert(`오른쪽 버튼입니다`);
+                        break;
+                    case 3 :
+                        alert(`왼쪽 버튼입니다`);
+                }
+            });
         });
+
+        
     </script>
 </body>
 </html>
