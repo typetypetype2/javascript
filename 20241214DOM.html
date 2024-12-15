@@ -3,24 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>20241214DOM.html</title>
+    <title>Document</title>
 </head>
 <body>
-    <button>위쪽</button>
-    <button>아래쪽</button>
-    <button>오른쪽</button>
-    <button>왼쪽</button>
-
+    <button value="빨강">red</button>
+    <button value="파랑">blue</button>
+    <button value="노랑">yellow</button>
+    
     <script>
         let btn = document.querySelectorAll('button');
 
-        btn.forEach(function (e) {
-            e.addEventListener("click", function () {
-                alert(`${e.innerText} 버튼입니다.`);
-            });
+        btn.forEach(function(e){
+            e.addEventListener('click', function(){
+                alert(`한국말로 ${e.getAttribute('value')}입니다`);
+            })
         });
-
-        
     </script>
 </body>
 </html>
