@@ -9,13 +9,21 @@
     <button value="빨강">red</button>
     <button value="파랑">blue</button>
     <button value="노랑">yellow</button>
+    <h1>
+        당신이 선택한 색깔은
+        <span>
+            00
+        </span>
+        입니다.
+    </h1>
     
     <script>
-        let btn = document.querySelectorAll('button');
+        let color = document.querySelectorAll("button");
+        let word = document.querySelector('h1 span');
 
-        btn.forEach(function(e){
+        color.forEach(function(e){
             e.addEventListener('click', function(){
-                alert(`한국말로 ${e.getAttribute('value')}입니다`);
+                word.innerText = e.getAttribute('value');
             })
         });
     </script>
