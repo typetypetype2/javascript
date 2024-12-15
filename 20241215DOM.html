@@ -10,19 +10,18 @@
     <button value="파랑">blue</button>
     <button value="노랑">yellow</button>
     <h1>
-        당신이 선택한 색깔은
-        <span>
-            00
-        </span>
-        입니다.
+        당신이 선택한 색깔은 <span>00</span>입니다.
     </h1>
     
     <script>
         let color = document.querySelectorAll("button");
         let word = document.querySelector('h1 span');
+        let h1 = document.querySelector('h1');
+        
 
         color.forEach(function(e){
             e.addEventListener('click', function(){
+                h1.style.color = e.innerText;
                 word.innerText = e.getAttribute('value');
             })
         });
