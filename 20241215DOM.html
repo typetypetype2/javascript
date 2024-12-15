@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button value="빨강">red</button>
+    <button value="파랑">blue</button>
+    <button value="노랑">yellow</button>
+    <h1>
+        당신이 선택한 색깔은
+        <span>
+            00
+        </span>
+        입니다.
+    </h1>
+    
+    <script>
+        let color = document.querySelectorAll("button");
+        let word = document.querySelector('h1 span');
+
+        color.forEach(function(e){
+            e.addEventListener('click', function(){
+                word.innerText = e.getAttribute('value');
+            })
+        });
+    </script>
+</body>
+</html>
