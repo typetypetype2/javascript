@@ -13,14 +13,14 @@
     </ul>
 
     <script>
-        let name = prompt();
-        let loca = prompt();
-        let grade = prompt();
+        let input = [prompt(),prompt(),prompt()];
 
         let span = document.querySelectorAll('span');
-        span[0].innerText = name;
-        span[1].innerText = loca;
-        span[2].innerText = grade;
+        
+        for(let i=0;i<3;i++)
+        {
+            span[i].innerText = input[i];   
+        }
     </script>
 </body>
 </html>
