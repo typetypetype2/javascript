@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>이름 : <span></span></li>
+        <li>사는곳 : <span></span></li>
+        <li>학년 : <span></span></li>
+    </ul>
+
+    <script>
+        let name = prompt();
+        let loca = prompt();
+        let grade = prompt();
+
+        let span = document.querySelectorAll('span');
+        span[0].innerText = name;
+        span[1].innerText = loca;
+        span[2].innerText = grade;
+    </script>
+</body>
+</html>
