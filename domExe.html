@@ -101,15 +101,22 @@
           transform: rotate(0deg);
         }
       }
+      img{
+        display: none;
+        width: 100%;
+      }
+      img.show{
+        display: block;
+        width: 100%;
+      }
     </style>
 
   </head>
 
   <body>
-
     <div class="game-container">
-
-      <h1>홀수일까? 짝수일까?</h1>
+        <img src="./0e1338c685e46b5d6a88f1366c563a7d.jpg" alt="축하" width="256" height="256">
+        <h1>홀수일까? 짝수일까?</h1>
 
       <p class="instructions">
 
@@ -151,6 +158,7 @@
         let btn = document.querySelectorAll('button');
         let result = document.querySelector('.result-message');
         let con = document.querySelector('.game-container');
+        let img = document.querySelector('img');
 
         let random = Math.floor(Math.random()*10)+1;
         let oddeven;
@@ -166,6 +174,7 @@
                 if(e.innerText==oddeven){
                     result.innerText="맞았습니다";
                     newnum();
+                    img.className="show";
                 }else{
                     result.innerText="틀렸습니다";
                     newnum();
@@ -173,6 +182,7 @@
                     setTimeout(function() {
                         con.className="game-container"; 
                     }, 500);
+                    img.className="";
                 }
             })
         })
