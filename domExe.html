@@ -115,6 +115,7 @@
 
   <body>
     <div class="game-container">
+        <h4>당신의 점수는 <span class="score">0</span>점입니다</h4>
         <img src="./0e1338c685e46b5d6a88f1366c563a7d.jpg" alt="축하" width="256" height="256">
         <h1>홀수일까? 짝수일까?</h1>
 
@@ -159,6 +160,7 @@
         let result = document.querySelector('.result-message');
         let con = document.querySelector('.game-container');
         let img = document.querySelector('img');
+        let score = document.querySelector('.score');
 
         let random = Math.floor(Math.random()*10)+1;
         let oddeven;
@@ -175,6 +177,7 @@
                     result.innerText="맞았습니다";
                     newnum();
                     img.className="show";
+                    score.innerText = parseInt(score.innerText)+10;
                 }else{
                     result.innerText="틀렸습니다";
                     newnum();
@@ -183,6 +186,7 @@
                         con.className="game-container"; 
                     }, 500);
                     img.className="";
+                    score.innerText = parseInt(score.innerText)-10;
                 }
             })
         })
